@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: registry.localhost/nginx:v0.1.1
+          image: registry.localhost:5000/nginx:v0.1.1
           ports:
             - containerPort: 80
