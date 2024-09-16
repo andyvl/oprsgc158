@@ -13,23 +13,11 @@ spec:
   replicas: 1
   template:
     metadata:
-      annotations:
-        kubectl.kubernetes.io/default-container: nginx
       labels:
         app: nginx
     spec:
-      # initContainers:
-        # Init containers are exactly like regular containers, except:
-          # - Init containers always run to completion.
-          # - Each init container must complete successfully before the next one starts.
       containers:
       - name: nginx
           image: localhost:5000/nginx:v0.1.1
-        imagePullPolicy: 
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-          limits:
-            cpu: 100m
-            memory: 100Mi
+          ports:
+            - containerPort: 80
