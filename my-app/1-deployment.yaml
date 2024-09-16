@@ -24,7 +24,7 @@ spec:
           # - Each init container must complete successfully before the next one starts.
       containers:
       - name: nginx
-          image: localhost:5000/nginx:v0.1.0 
+          image: localhost:5000/nginx:v0.1.1
         imagePullPolicy: 
         resources:
           requests:
